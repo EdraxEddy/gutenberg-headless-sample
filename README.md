@@ -5,7 +5,7 @@ A small, production-style sample of two things working together:
 1. **`wp-plugin/feature-card-block`**: a dynamic Gutenberg block (block.json `apiVersion: 3`, React editor, server-side render) that is also exposed to headless front ends as **structured data** through the REST API.
 2. **`nextjs-headless`**: a Next.js (App Router, TypeScript) site that reads posts from WordPress and renders that block as a **real React component**, falling back to sanitised HTML for every other block.
 
-**Live demo:** _link added after deployment_
+**Live demo:** https://gutenberg-headless-sample.vercel.app (try [a post with the block](https://gutenberg-headless-sample.vercel.app/why-headless-wordpress) and [the structured JSON](https://gutenberg-headless-sample.vercel.app/wp-json/wp/v2/posts))
 
 | Block editor | Next.js front end |
 | --- | --- |
