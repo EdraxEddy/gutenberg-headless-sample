@@ -1,0 +1,58 @@
+/* Same design tokens as the block's style.scss, so editor and front end match. */
+.card {
+  --fc-accent: #3d6bff;
+  --fc-bg: #f6f8ff;
+  --fc-text: #1c2033;
+
+  margin: 28px 0;
+  padding: 28px 28px 24px;
+  border-radius: 16px;
+  background: var(--fc-bg);
+  color: var(--fc-text);
+  border: 1px solid color-mix(in srgb, var(--fc-accent) 25%, transparent);
+  box-shadow: 0 12px 30px -18px color-mix(in srgb, var(--fc-accent) 60%, transparent);
+}
+
+.violet {
+  --fc-accent: #7b4dff;
+  --fc-bg: #f7f3ff;
+}
+
+.amber {
+  --fc-accent: #c76a00;
+  --fc-bg: #fff7ec;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fc-accent);
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.text {
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 600;
+  color: var(--fc-accent);
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  text-decoration: underline;
+}

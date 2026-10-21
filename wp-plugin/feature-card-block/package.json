@@ -1,0 +1,30 @@
+{
+	"name": "feature-card-block",
+	"version": "1.0.0",
+	"description": "Dynamic Gutenberg block with structured REST output for headless front ends.",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"start": "wp-scripts start --webpack-copy-php",
+		"lint:js": "wp-scripts lint-js src",
+		"lint:css": "wp-scripts lint-style \"src/**/*.scss\"",
+		"format": "wp-scripts format src",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"files": [
+		"build",
+		"includes",
+		"feature-card-block.php",
+		"readme.txt"
+	],
+	"devDependencies": {
+		"@wordpress/scripts": "35.0.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^19.0.0",
+		"@wordpress/blocks": "^17.0.0",
+		"@wordpress/components": "^43.0.0",
+		"@wordpress/i18n": "^7.0.0"
+	}
+}

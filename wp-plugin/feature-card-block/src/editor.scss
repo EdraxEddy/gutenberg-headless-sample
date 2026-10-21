@@ -1,0 +1,7 @@
+/**
+ * Editor-only tweaks: keep empty RichText placeholders readable
+ * on the tinted card.
+ */
+.wp-block-headless-sample-feature-card [data-rich-text-placeholder]::after {
+	opacity: 0.55;
+}

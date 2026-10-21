@@ -1,0 +1,145 @@
+{
+  "note": "Snapshot of the WordPress REST API (wp/v2/posts with the structured_blocks field). Used when WP_API_URL is not set, so the demo runs without a public WordPress.",
+  "generatedAt": "2026-10-21T05:56:15+00:00",
+  "site": {
+    "name": "Headless Sample",
+    "description": ""
+  },
+  "posts": [
+    {
+      "id": 7,
+      "date": "2026-10-21T05:47:52",
+      "modified": "2026-10-21T05:47:52",
+      "slug": "fast-by-default-static-pages-that-refresh-themselves",
+      "title": {
+        "rendered": "Fast by default: static pages that refresh themselves"
+      },
+      "excerpt": {
+        "rendered": "<p>Static generation with time-based revalidation keeps pages instant while new posts still show up within minutes.</p>\n",
+        "protected": false
+      },
+      "structured_blocks": [
+        {
+          "name": "core/paragraph",
+          "attrs": {
+            "dropCap": false
+          },
+          "html": "\n<p class=\"wp-block-paragraph\">Every page is generated ahead of time, so visitors get plain HTML from the edge. Next.js re-fetches WordPress in the background on a schedule and swaps the page when something changed.</p>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "headless-sample/feature-card",
+          "attrs": {
+            "eyebrow": "Performance",
+            "title": "Instant pages, fresh content",
+            "text": "Static generation plus revalidation: no database hit per visit, and editors never have to trigger a rebuild by hand.",
+            "accent": "amber",
+            "ctaLabel": "",
+            "ctaUrl": "",
+            "opensInNewTab": false
+          },
+          "html": "<div class=\"feature-card feature-card--amber wp-block-headless-sample-feature-card\">\n\t\t\t<p class=\"feature-card__eyebrow\">Performance</p>\n\t\n\t\t\t<h3 class=\"feature-card__title\">Instant pages, fresh content</h3>\n\t\n\t\t\t<p class=\"feature-card__text\">Static generation plus revalidation: no database hit per visit, and editors never have to trigger a rebuild by hand.</p>\n\t\n\t</div>\n",
+          "innerBlocks": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "date": "2026-10-21T05:47:50",
+      "modified": "2026-10-21T05:56:10",
+      "slug": "blocks-as-data",
+      "title": {
+        "rendered": "Blocks as data, not just HTML"
+      },
+      "excerpt": {
+        "rendered": "<p>The plugin exposes every block with its name and attributes, so the front end can render custom blocks as real components.</p>\n",
+        "protected": false
+      },
+      "structured_blocks": [
+        {
+          "name": "core/paragraph",
+          "attrs": {
+            "dropCap": false
+          },
+          "html": "\n<p class=\"wp-block-paragraph\">By default the REST API returns <code>content.rendered</code>: one long HTML string. That works for paragraphs and images, but a custom block deserves more than a string.</p>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "headless-sample/feature-card",
+          "attrs": {
+            "eyebrow": "REST field",
+            "title": "A <em>blocks</em> field on every post",
+            "text": "Name, attributes merged with their defaults, server-rendered HTML as a fallback, and inner blocks. The front end maps known blocks to components.",
+            "ctaLabel": "See the JSON",
+            "ctaUrl": "/wp-json/wp/v2/posts?_fields=slug,title,structured_blocks",
+            "opensInNewTab": true,
+            "accent": "blue"
+          },
+          "html": "<div class=\"feature-card feature-card--blue wp-block-headless-sample-feature-card\">\n\t\t\t<p class=\"feature-card__eyebrow\">REST field</p>\n\t\n\t\t\t<h3 class=\"feature-card__title\">A <em>blocks</em> field on every post</h3>\n\t\n\t\t\t<p class=\"feature-card__text\">Name, attributes merged with their defaults, server-rendered HTML as a fallback, and inner blocks. The front end maps known blocks to components.</p>\n\t\n\t\t\t<a\n\t\t\tclass=\"feature-card__cta\"\n\t\t\thref=\"/wp-json/wp/v2/posts?_fields=slug,title,structured_blocks\"\n\t\t\t\t\t\t\ttarget=\"_blank\" rel=\"noopener noreferrer\"\n\t\t\t\t\t>\n\t\t\tSee the JSON\t\t\t<span aria-hidden=\"true\">→</span>\n\t\t\t\t\t\t\t<span class=\"screen-reader-text\">(opens in a new tab)</span>\n\t\t\t\t\t</a>\n\t</div>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "core/paragraph",
+          "attrs": {
+            "dropCap": false
+          },
+          "html": "\n<p class=\"wp-block-paragraph\">Unknown or core blocks fall back to their rendered HTML, so nothing ever disappears from the page.</p>\n",
+          "innerBlocks": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "date": "2026-10-21T05:47:49",
+      "modified": "2026-10-21T05:47:49",
+      "slug": "why-headless-wordpress",
+      "title": {
+        "rendered": "Why headless WordPress?"
+      },
+      "excerpt": {
+        "rendered": "<p>Editors keep the WordPress they know, developers get a modern React front end. Here is when that trade-off pays off.</p>\n",
+        "protected": false
+      },
+      "structured_blocks": [
+        {
+          "name": "core/paragraph",
+          "attrs": {
+            "dropCap": false
+          },
+          "html": "\n<p class=\"wp-block-paragraph\">Headless WordPress splits the job in two: WordPress stays the place where content is written and organised, and a separate front end, here Next.js, decides how it looks and how fast it loads.</p>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "headless-sample/feature-card",
+          "attrs": {
+            "eyebrow": "In short",
+            "title": "One editor, any front end",
+            "text": "Content lives in WordPress. Next.js fetches it through the <strong>REST API</strong> and renders it as static pages that refresh on their own.",
+            "ctaLabel": "How the blocks travel",
+            "ctaUrl": "/blocks-as-data",
+            "accent": "violet",
+            "opensInNewTab": false
+          },
+          "html": "<div class=\"feature-card feature-card--violet wp-block-headless-sample-feature-card\">\n\t\t\t<p class=\"feature-card__eyebrow\">In short</p>\n\t\n\t\t\t<h3 class=\"feature-card__title\">One editor, any front end</h3>\n\t\n\t\t\t<p class=\"feature-card__text\">Content lives in WordPress. Next.js fetches it through the <strong>REST API</strong> and renders it as static pages that refresh on their own.</p>\n\t\n\t\t\t<a\n\t\t\tclass=\"feature-card__cta\"\n\t\t\thref=\"/blocks-as-data\"\n\t\t\t\t\t>\n\t\t\tHow the blocks travel\t\t\t<span aria-hidden=\"true\">→</span>\n\t\t\t\t\t</a>\n\t</div>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "core/heading",
+          "attrs": {
+            "level": 2
+          },
+          "html": "\n<h2 class=\"wp-block-heading\">When it is worth it</h2>\n",
+          "innerBlocks": []
+        },
+        {
+          "name": "core/paragraph",
+          "attrs": {
+            "dropCap": false
+          },
+          "html": "\n<p class=\"wp-block-paragraph\">Sites that need top performance, a design system shared with an app, or several front ends fed from one editorial team. For a simple brochure site, a classic theme is still the faster route.</p>\n",
+          "innerBlocks": []
+        }
+      ]
+    }
+  ]
+}

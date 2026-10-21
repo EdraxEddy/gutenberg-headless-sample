@@ -1,0 +1,10 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"steps": [
+		{ "step": "login", "username": "admin" },
+		{ "step": "activatePlugin", "pluginPath": "feature-card-block/feature-card-block.php" },
+		{ "step": "setSiteOptions", "options": { "blogname": "Headless Sample", "permalink_structure": "/%postname%/" } }
+	]
+}

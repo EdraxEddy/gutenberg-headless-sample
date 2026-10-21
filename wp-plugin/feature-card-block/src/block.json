@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "headless-sample/feature-card",
+	"version": "1.0.0",
+	"title": "Feature Card",
+	"category": "design",
+	"icon": "id-alt",
+	"description": "A card with an eyebrow, a title, a short text and an optional call to action. Rendered on the server, and exposed to headless front ends as structured data.",
+	"keywords": [ "card", "feature", "cta" ],
+	"textdomain": "feature-card-block",
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"opensInNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"accent": {
+			"type": "string",
+			"enum": [ "blue", "violet", "amber" ],
+			"default": "blue"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"example": {
+		"attributes": {
+			"eyebrow": "New",
+			"title": "Ship faster with blocks",
+			"text": "Structured content that editors love and front ends can trust.",
+			"ctaLabel": "Read more",
+			"ctaUrl": "#",
+			"accent": "violet"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

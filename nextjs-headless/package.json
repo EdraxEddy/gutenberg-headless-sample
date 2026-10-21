@@ -1,0 +1,29 @@
+{
+    "name":  "nextjs-headless",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "lint":  "eslint",
+                    "format":  "prettier --write src",
+                    "typecheck":  "tsc --noEmit"
+                },
+    "dependencies":  {
+                         "next":  "16.4.2",
+                         "react":  "19.3.0",
+                         "react-dom":  "19.3.0",
+                         "sanitize-html":  "^2.18.1"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^20",
+                            "@types/react":  "^19",
+                            "@types/react-dom":  "^19",
+                            "@types/sanitize-html":  "^2.16.2",
+                            "eslint":  "^9",
+                            "eslint-config-next":  "16.4.2",
+                            "prettier":  "^3.9.10",
+                            "typescript":  "^5"
+                        }
+}
